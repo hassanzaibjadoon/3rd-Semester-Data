@@ -1,0 +1,57 @@
+class Complex:
+    def __init__(self, r=0.0, i=0.0):
+        self.re = r
+        self.img = i
+
+    def input(self):
+        self.re = float(input("Enter real part: "))
+        self.img = float(input("Enter imaginary part: "))
+        return self
+
+    def addCom(self, c1):
+        result = Complex()
+        result.re = self.re + c1.re
+        result.img = self.img + c1.img
+        return result
+
+    def subCom(self, c1):
+        result = Complex()
+        result.re = self.re - c1.re
+        result.img = self.img - c1.img
+        return result
+
+    def mulCom(self, c1):
+        result = Complex()
+        result.re = self.re * c1.re - self.img * c1.img
+        result.img = self.re * c1.img + self.img * c1.re
+        return result
+
+    def show(self):
+        if self.img >= 0:
+            print(f"{self.re} + {self.img}i")
+        else:
+            print(f"{self.re}{self.img}i")
+
+
+# Main execution
+c1 = Complex()
+c2 = Complex()
+
+# Input complex numbers
+c1 = c1.input()
+c2 = c2.input()
+
+# Addition
+result = c1.addCom(c2)
+print("Sum: ", end="")
+result.show()
+
+# Subtraction
+result = c1.subCom(c2)
+print("Difference: ", end="")
+result.show()
+
+# Multiplication
+result = c1.mulCom(c2)
+print("Product: ", end="")
+result.show()
