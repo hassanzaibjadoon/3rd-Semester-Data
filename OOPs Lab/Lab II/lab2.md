@@ -1,3 +1,4 @@
+
 # Lab No.2: Passing and Returning Objects from Member Functions [Part 2]
 
 ## 2.1 Introduction
@@ -60,13 +61,18 @@ int main() {
     cout << "Sum of two Complex Numbers: "; c.show();
     return 0;
 }
-2.3.3 Returning Objects from Functions
+```
+
+---
+
+### 2.3.3 Returning Objects from Functions
 Objects can be returned from functions just like normal primitive type variables.
 
-2.3.4 Example Code in C++: complexRetObjfun.cpp
-cpp
-Copy
-Edit
+---
+
+### 2.3.4 Example Code in C++: `complexRetObjfun.cpp`
+
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -106,10 +112,13 @@ int main() {
     cout << "Negation of Complex Number: "; c2.show();
     return 0;
 }
-2.3.5 Example Code in Java: complexObjfun.java
-java
-Copy
-Edit
+```
+
+---
+
+### 2.3.5 Example Code in Java: `complexObjfun.java`
+
+```java
 package lab2s1;
 
 public class complexObjfun {
@@ -146,16 +155,15 @@ public class complexObjfun {
         }
     }
 }
-2.3.6 Example Code in Python: complexObjfun.py
-python
-Copy
-Edit
-class complex:
-    def __init__(self):
-        self.re = 0.0
-        self.img = 0.0
+```
 
-    def __init__(self, r, i):
+---
+
+### 2.3.6 Example Code in Python: `complexObjfun.py`
+
+```python
+class complex:
+    def __init__(self, r=0.0, i=0.0):
         self.re = r
         self.img = i
 
@@ -180,42 +188,63 @@ c1.show()
 c2 = complex(5, 3)
 print("Second Complex Number: ")
 c2.show()
-c = complex(0, 0)
+c = complex()
 print("Sum of two Complex Numbers: ")
 c.addCom(c1, c2)
 c.show()
 c = c1.negate()
 print("Negation of Complex Number: ")
 c.show()
-2.4 Activities
-2.4.1 Activity: Complex Arithmetic Operations
-Perform arithmetic with complex numbers. Add the following methods to the Complex class:
+```
 
-Input Method:
-input(): Take complex number real and imaginary parts from the user at runtime.
-Subtraction Method:
-subCom(Complex c1, Complex c2): Subtracts two complex numbers.
-Multiplication Method:
-mulCom(Complex c1, Complex c2): Multiplies two complex numbers.
-Demonstrate usage in the main() function by performing the operations and displaying the results.
+---
 
-2.4.2 Activity: Return Type of Functions
-Modify the addCom(), subCom(), and mulCom() functions to return the results instead of modifying the current object. The return type for each function should be Complex.
+## 2.4 Activities
 
-2.5 Testing
-Activity 2.4.1 Test Cases
-Input/Action	Output
-Call input() for c1 and c2	Complex Numbers Input
-Call show() after input for c1	Displays the first complex number
-Call addCom() with c1 and c2	Displays the sum
-Call subCom() with c1 and c2	Displays the difference
-Call mulCom() with c1 and c2	Displays the product
-2.6 Tools
-Code::Blocks for C++
-Visual Studio Code for Python
-2.7 References
-Class notes.
-"Object-Oriented Programming in C++" by Robert Lafore (Chapter 6).
-"How to Program C++" by Deitel & Deitel (Chapter 6).
-"Programming and Problem Solving with Java" by Nell Dale & Chip Weems.
-"Murach’s Python Programming" by Michael Urban & Joel Murach.
+### 2.4.1 Activity: Complex Arithmetic Operations
+Perform arithmetic with complex numbers. Add the following methods to the `Complex` class:
+
+- **Input Method**: 
+  `input()`: Take complex number real and imaginary parts from the user at runtime.
+  
+- **Subtraction Method**: 
+  `subCom(Complex c1, Complex c2)`: Subtracts two complex numbers.
+  
+- **Multiplication Method**: 
+  `mulCom(Complex c1, Complex c2)`: Multiplies two complex numbers.
+  
+Demonstrate usage in the `main()` function by performing the operations and displaying the results.
+
+### 2.4.2 Activity: Return Type of Functions
+Modify the `addCom()`, `subCom()`, and `mulCom()` functions to return the results instead of modifying the current object. The return type for each function should be `Complex`.
+
+---
+
+## 2.5 Testing
+
+### Activity 2.4.1 Test Cases
+
+| Input/Action                        | Output                           |
+| ------------------------------------ | --------------------------------- |
+| Call `input()` for `c1` and `c2`    | Complex Numbers Input            |
+| Call `show()` after input for `c1`  | Displays the first complex number|
+| Call `addCom()` with `c1` and `c2`  | Displays the sum                 |
+| Call `subCom()` with `c1` and `c2`  | Displays the difference           |
+| Call `mulCom()` with `c1` and `c2`  | Displays the product              |
+
+---
+
+## 2.6 Tools
+
+- Code::Blocks for C++
+- Visual Studio Code for Python
+
+---
+
+## 2.7 References
+
+- Class notes.
+- "Object-Oriented Programming in C++" by Robert Lafore (Chapter 6).
+- "How to Program C++" by Deitel & Deitel (Chapter 6).
+- "Programming and Problem Solving with Java" by Nell Dale & Chip Weems.
+- "Murach’s Python Programming" by Michael Urban & Joel Murach.
