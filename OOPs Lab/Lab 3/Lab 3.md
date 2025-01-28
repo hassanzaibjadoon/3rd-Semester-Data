@@ -51,20 +51,19 @@ int main() {
 
     return 0;
 }
-**Output**  
+```
+
+Output
 Figure 3.2: Output staticVsNonStatic.cpp
 
----
 
-### 3.3.5 Const Members and Objects
-- **Const Members**: Initialized once and remain constant throughout the object's lifetime.
-- **Const Objects**: Prevent modification of their data members after initialization.
+3.3.3 Const Members and Objects
+Const Members: Initialized once and remain constant throughout the object's lifetime.
+Const Objects: Prevent modification of their data members after initialization.
 
----
+3.3.4 Example Code: 'constMembers.cpp'
 
-### 3.3.6 Example Code: `constMembers.cpp`
-
-```cpp
+```
 #include <iostream>
 using namespace std;
 
@@ -97,21 +96,19 @@ int main() {
 
     return 0;
 }
-**Output**  
+
+```
+Output
+
 Figure 3.3: Output constMembers.cpp
 
----
+3.3.5 Objects vs. Pointers and Objects Inside Objects
+Objects: Instances of a class capable of directly invoking member functions.
+Pointers: Indirect access to objects, enabling dynamic memory allocation using ->.
+Objects Inside Objects: Allow constructing complex structures by including objects as members of other classes.
+3.3.6 Example Code: 'objectWithinObject.cpp'
 
-### 3.3.7 Objects vs. Pointers and Objects Inside Objects
-- **Objects**: Instances of a class capable of directly invoking member functions.
-- **Pointers**: Indirect access to objects, enabling dynamic memory allocation using `->`.
-- **Objects Inside Objects**: Allow constructing complex structures by including objects as members of other classes.
-
----
-
-### 3.3.8 Example Code: `objectWithinObject.cpp`
-
-```cpp
+```
 #include <iostream>
 using namespace std;
 
@@ -155,4 +152,4 @@ int main() {
     delete obj2;
     return 0;
 }
-
+```
